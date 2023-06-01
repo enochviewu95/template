@@ -75,6 +75,16 @@
   height: 2px;
   background-color: #574c4c;
 }
+.nav_elements ul li :hover {
+  /* transform: translateY(-10px); */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  background-color: #585c27;
+}
+.appointment :hover {
+  /* transform: translateY(-10px); */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  background-color: #36837c;
+}
 
 .brand {
   padding-left: 20px;
@@ -82,7 +92,7 @@
   font-family: 'Yeseva One', cursive;
   color: white;
   display: inline !important;
-  margin-top: 40px;
+  margin-top: 5px;
 }
 
 .logoSection img {
