@@ -19,7 +19,7 @@ function Appointment() {
                 <div className={styles.t2}>Dentist</div>
                 <div className={styles.t3}>Dr. Roman Reigns</div>
               </div>
-              <div className={styles.date}>&#128197; 20Jan 2023</div>
+              <div className={styles.date}>&#128197; 20 Jan 2023</div>
             </div>
             <div className={styles.doc2}>
               <img src="doc.webp" />
@@ -27,7 +27,7 @@ function Appointment() {
                 <div className={styles.t2}>Dentist</div>
                 <div className={styles.t3}>Dr. Roman Reigns</div>
               </div>
-              <div className={styles.date}>&#128197; 20Jan 2023</div>
+              <div className={styles.date}>&#128197; 20 Jan 2023</div>
             </div>
             <div className={styles.doc2}>
               <img src="doc.webp" />
@@ -35,7 +35,7 @@ function Appointment() {
                 <div className={styles.t2}>Dentist</div>
                 <div className={styles.t3}>Dr. Roman Reigns</div>
               </div>
-              <div className={styles.date}>&#128197; 20Jan 2023</div>
+              <div className={styles.date}>&#128197; 20 Jan 2023</div>
             </div>
             <div className={styles.doc2}>
               <img src="doc.webp" />
@@ -43,7 +43,7 @@ function Appointment() {
                 <div className={styles.t2}>Dentist</div>
                 <div className={styles.t3}>Dr. Roman Reigns</div>
               </div>
-              <div className={styles.date}>&#128197; 20Jan 2023</div>
+              <div className={styles.date}>&#128197; 20 Jan 2023</div>
             </div>
             <div className={styles.doc2}>
               <img src="doc.webp" />
@@ -51,7 +51,7 @@ function Appointment() {
                 <div className={styles.t2}>Dentist</div>
                 <div className={styles.t3}>Dr. Roman Reigns</div>
               </div>
-              <div className={styles.date}>&#128197; 20Jan 2023</div>
+              <div className={styles.date}>&#128197; 20 Jan 2023</div>
             </div>
           </div>
           <div className={styles.button}>
@@ -67,7 +67,7 @@ function Appointment() {
                 <div className={styles.t2}>Dentist</div>
                 <div className={styles.t3}>Dr. Roman Reigns</div>
               </div>
-              <div className={styles.date}>&#128197; 20Jan 2023</div>
+              <div className={styles.date}>&#128197; 20 Jan 2023</div>
             </div>
             <div className={styles.doc2}>
               <img src="doc.webp" />
@@ -75,7 +75,7 @@ function Appointment() {
                 <div className={styles.t2}>Dentist</div>
                 <div className={styles.t3}>Dr. Roman Reigns</div>
               </div>
-              <div className={styles.date}>&#128197; 20Jan 2023</div>
+              <div className={styles.date}>&#128197; 20 Jan 2023</div>
             </div>
             <div className={styles.doc2}>
               <img src="doc.webp" />
@@ -83,7 +83,7 @@ function Appointment() {
                 <div className={styles.t2}>Dentist</div>
                 <div className={styles.t3}>Dr. Roman Reigns</div>
               </div>
-              <div className={styles.date}>&#128197; 20Jan 2023</div>
+              <div className={styles.date}>&#128197; 20 Jan 2023</div>
             </div>
           </div>
         </div>
@@ -102,15 +102,15 @@ function Appointment() {
           </div>
           <div className={styles.appointment_1}>
             <p className={styles.appointment_fee_text}>Appointment Fee</p>
-            <p className={styles.appointment_fee}>₹ 500</p>
+            <p className={styles.appointment_fee}>GHC 40</p>
           </div>
           <div className={styles.appointment_2}>
             <p className={styles.admin_fee_text}>Admin Fee</p>
-            <p className={styles.admin_fee}>₹ 500</p>
+            <p className={styles.admin_fee}>GHC 10</p>
           </div>
           <div className={styles.appointment_3}>
             <p className={styles.total_fee_text}>Total Fee</p>
-            <p className={styles.total_fee}>₹ 500</p>
+            <p className={styles.total_fee}>GHC 50</p>
           </div>
           {/* <StripeCheckout
             stripeKey="pk_test_51MvIxBSBOxWp4pAyGoeweYV6l1WI83qkno8SGJSeNd63fgm58e1bCYByxQRS8w2TUnYgFxHm8Zei09dsYMqXdNQV00XMjZBEgg"
@@ -121,7 +121,7 @@ function Appointment() {
             shippingAddress
           > */}
           <Link to="/checkout">
-            <div className={styles.pay}>Pay ₹550</div>
+            <div className={styles.pay}>Pay GHC 50</div>
           </Link>
           {/* </StripeCheckout> */}
         </div>

@@ -5,7 +5,6 @@ import Account from "../../../assets/account.svg";
 import { useSelector } from "react-redux";
 import Burger from "../BurgerD/BurgerD";
 
-
 const Navbar = () => {
   const doctor = useSelector((state) => {
     return state.doctor;
@@ -21,7 +20,7 @@ const Navbar = () => {
             <div className={styles.logoSection}>
               <img alt="brand" src={Brand} />
               <span className={styles.brand}>
-                Health<p className={styles.brandIn}>Doc</p>
+                MEDIFY<p className={styles.brandIn}>ME</p>
               </span>
             </div>
           </Link>
