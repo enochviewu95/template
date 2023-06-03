@@ -70,7 +70,7 @@ function Home() {
           <div className={styles.content2}>
             Keeping your Health Records <br></br> organized and Safe!
           </div>
-          <Link to="/health_history">
+          <Link to="/Login">
             <div className={styles.content3}>Get Started</div>
           </Link>
         </div>
@@ -78,7 +78,7 @@ function Home() {
           <LazyLoadImage src="Group.webp" />
         </div>
         <div className={styles.button}>
-          <Link to="/health_history">
+          <Link to="/HealthHistory">
             <div className={styles.b1}>
               Check your Health History
               <LazyLoadImage src="history.webp" />
@@ -90,7 +90,7 @@ function Home() {
               <LazyLoadImage src="query.webp" />
             </div>
           </Link>
-          <Link to="/appointment">
+          <Link to="/Appointment">
             <div className={styles.b3}>
               Book an Appointment
               <LazyLoadImage src="appointment.webp" />

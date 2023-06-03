@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './BurgerD.module.css'
 import {Link} from'react-router-dom'
-import Account from "../../../assets/account.svg";
+//import Account from "../../../assets/account.svg";
 
 const Burger = (patient) => {
     const [open, setOpen] = useState(false)

@@ -80,7 +80,7 @@
     .ul {
       display: flex;
       flex-flow: column nowrap;
-      background: linear-gradient(84.18deg, #2d495d 0.31%, #28333a 100%) fixed
+      background: linear-gradient(84.18deg, #524400 0.31%, #524400 100%) fixed
         center center/cover;
       position: absolute;
       transform: translateX(0);
