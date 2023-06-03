@@ -1,7 +1,7 @@
 .main{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background:linear-gradient(90deg,#524400 40%,#524400 80%)
+    background:linear-gradient(90deg,#CDAA64 40%,#CDAA64 80%)
 }
 
 .left{
@@ -13,7 +13,7 @@
 
 .left h1{
     font-size: 12vw;
-    color:#CDAA64;
+    color:#70272a;
     margin-bottom: 0px;
     border-bottom: 10px solid #CDAA64;
     width:fit-content;

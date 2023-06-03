@@ -260,7 +260,7 @@
   line-height: 61px;
   text-align: center;
 
-  color: #066f8f;
+  color: #f0d90b;
 }
 
 .lp6 {
@@ -303,9 +303,9 @@
   display: block;
   width: 1.5vw;
   height: 1.5vw;
-  color: #285f83;
+  color: #524400;
   border-radius: 50%;
-  background-color: #285f83;
+  background-color: #524400;
   text-align: center;
   margin-right: 0.5em;
 }
@@ -470,7 +470,7 @@
   .b1 {
     width: 25vw;
     height: 8vh;
-    background: #2b3e4c;
+    background: #524400;
     border-radius: 6.85px;
     display: flex;
     align-items: center;
@@ -585,7 +585,7 @@
   .b1 {
     width: 25vw;
     height: 8vh;
-    background: #2b3e4c;
+    background: #524400;
     border-radius: 6.85px;
     display: flex;
     align-items: center;

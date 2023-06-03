@@ -76,7 +76,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       <Route index element={<Home />} />
-      <Route path="login" element={<Login />} />
+      {/* <Route path="login" element={<Login />} /> */}
       <Route path="register" element={<Register />} />
       <Route path="health_history" element={<Health_history />} />
       <Route path="healthHistoryForm" element={<Health_history_form />} />
