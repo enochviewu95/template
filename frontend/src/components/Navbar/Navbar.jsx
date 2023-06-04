@@ -32,7 +32,7 @@ const Navbar = () => {
           <ul>
             <li
               className={
-                location.pathname === "/health_history" ? styles.active : ""
+                location.pathname === "/HealthHistory" ? styles.active : ""
               }
             >
               <Link to="/health_history">Health History</Link>
@@ -42,7 +42,7 @@ const Navbar = () => {
                 location.pathname === "/prescription" ? styles.active : ""
               }
             >
-              <Link to="/prescription">Prescriptions</Link>
+              <Link to="/Prescription">Prescriptions</Link>
             </li>
             <li className={location.pathname === "/test" ? styles.active : ""}>
               <Link to="/test">Tests & Reports</Link>

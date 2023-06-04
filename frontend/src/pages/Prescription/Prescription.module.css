@@ -1,7 +1,7 @@
 .PreH {
     width: 340px;
     height: 180px;
-    background: #2B3E4C;
+    background: #524400;
     border-radius: 20px 20px 0px 0px;
     margin-top: 15px;
     margin-left: 22px;
@@ -70,7 +70,7 @@
 .button {
     width: 340px;
     height: 45px;
-    background: #2B3E4C;
+    background: #524400;
     border-radius: 0px 0px 20px 20px;
     margin-top: 2px;
     margin-left: 22px;
@@ -101,7 +101,7 @@
 .currMed {
     width: 340px;
     height: 370px;
-    background: #2B3E4C;
+    background: #524400;
     border-radius: 20px;
     margin-top: 10px;
     margin-left: 22px;
@@ -182,7 +182,7 @@
 }
 
 .ct1 {
-    font-family: 'Yeseva One';
+    font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
@@ -192,7 +192,7 @@
 }
 
 .ct2 {
-    font-family: 'Yeseva One';
+    font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
@@ -223,7 +223,7 @@
 
 .photo {
     margin-left: 10px;
-    background-color: #2B3F4E;
+    background-color: #524400;
     border-radius: 20px;
     padding: 10px;
 }
@@ -288,8 +288,8 @@
 .documentst {
     display: flex;
     align-items: center;
-    background: #CDAA64;
-    color: black;
+    /* background: #CDAA64; */
+    color: white;
     border-radius: 50px;
     padding: 8px;
     justify-content: center;
@@ -343,5 +343,5 @@
     font-weight: bold;
     font-family: 'Work Sans';
     font-size: 30px;
-    color: #2B3F4E;
+    color: #524400;
 }

@@ -4,18 +4,20 @@ import { Elements } from "@stripe/react-stripe-js";
 import Navbar from "../../components/Navbar/Navbar";
 import CheckoutForm from "../../components/Checkoutform/Checkoutform";
 
+import "./checkout.module.css";
+
 export default function App() {
   const [clientSecret, setClientSecret] = useState("");
   const stripe = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
 
-  const url = 
+  // const url = 
   
-  // let url;
-  // if (import.meta.env.MODE === "development") {
-  //   url = "http://34.87.104.131:8080/payments/create_payment_intent";
-  // } else {
-  //   url = "https://medifyme-pvpz.onrender.com/payments/create_payment_intent";
-  // }
+  let url;
+  if (import.meta.env.MODE === "development") {
+    url = "http://34.87.104.131:8080/payments/create_payment_intent";
+  } else {
+    url = "https://medifyme-pvpz.onrender.com/payments/create_payment_intent";
+  }
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_SERVER_URL}/payments/create_payment_intent`, {
@@ -36,13 +38,15 @@ export default function App() {
   };
 
   return (
-    <div>
-      <Navbar />
+    <>
+    <div className="navbar">
+    <Navbar />
+    </div>
       {clientSecret && (
         <Elements options={options} stripe={stripe}>
           <CheckoutForm />
         </Elements>
       )}
-    </div>
+    </>
   );
 }

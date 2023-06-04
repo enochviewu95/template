@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { usePrescriptionFormMutation } from "../../store";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-//import { toast } from "react-toastify";
+import { toast } from "react-toastify";
 import Loading from "../../components/Loading/Loading";
 import useFileUploader from "../../hooks/useFileUploader";
 
@@ -23,12 +23,12 @@ function Home() {
   const [form, formResults] = usePrescriptionFormMutation();
   const isLoading = formResults.isLoading;
 
-  useEffect(() => {
-    if (!patient.isLoggedIn) {
-      navigate("/login");
-      toast.error("Please login to continue");
-    }
-  }, [navigate, patient.isLoggedIn]);
+  // useEffect(() => {
+  //   if (!patient.isLoggedIn) {
+  //     navigate("/login");
+  //     toast.error("Please login to continue");
+  //   }
+  // }, [navigate, patient.isLoggedIn]);
 
   if (isLoading) {
     return (

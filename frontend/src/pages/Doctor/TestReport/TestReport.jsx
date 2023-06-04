@@ -1,9 +1,9 @@
 import NavbarD from "../../../components/Doctor/NavbarD/NavbarD";
 import styles from "./TestReport.module.css";
 import { useSelector } from "react-redux";
-//import { useEffect } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-//import { toast } from "react-toastify";
+import { toast } from "react-toastify";
 import { useState } from "react";
 
 function Test() {
@@ -21,12 +21,12 @@ function Test() {
     isclick = styles.edit_btn_clicked;
   }
 
-//   useEffect(() => {
-//     if (!patient.isLoggedIn) {
-//       navigate("/login");
-//       toast.error("Please login to continue");
-//     }
-//   }, [navigate, patient.isLoggedIn]);
+  useEffect(() => {
+    if (!patient.isLoggedIn) {
+      navigate("/login");
+      toast.error("Please login to continue");
+    }
+  }, [navigate, patient.isLoggedIn]);
 
   return (
     <>
@@ -135,9 +135,9 @@ function Test() {
                     </div>
                 </div>
           </div>
-          {/* <div className={styles.photo}>
+          <div className={styles.photo}>
             <img src="PrescribtionImage.jpg" />
-          </div> */}
+          </div>
         </div>
       </div>
     </>

@@ -3,7 +3,7 @@ import styles from "./Appointment.module.css";
 import { Link } from "react-router-dom";
 import React from "react";
 
-//import "react-toastify/dist/ReactToastify.css";
+import "react-toastify/dist/ReactToastify.css";
 
 function Appointment() {
   return (
@@ -120,7 +120,7 @@ function Appointment() {
             billingAddress
             shippingAddress
           > */}
-          <Link to="/checkout">
+          <Link to="/Checkout">
             <div className={styles.pay}>Pay GHC 50</div>
           </Link>
           {/* </StripeCheckout> */}

@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Loading from "../../components/Loading/Loading";
-//import useFileUploader from "../../hooks/useFileUploader";
+import useFileUploader from "../../hooks/useFileUploader";
 
 function Health_history_form() {
   const navigate = useNavigate();
@@ -26,12 +26,12 @@ function Health_history_form() {
   const [form, formResults] = useHealthFormMutation();
   const isLoading = formResults.isLoading;
 
-  useEffect(() => {
-    if (!patient.isLoggedIn) {
-      navigate("/login");
-      toast.error("Please login to continue");
-    }
-  }, [navigate, patient.isLoggedIn]);
+  // useEffect(() => {
+  //   if (!patient.isLoggedIn) {
+  //     navigate("/login");
+  //     toast.error("Please login to continue");
+  //   }
+  // }, [navigate, patient.isLoggedIn]);
 
   if (isLoading) {
     return (

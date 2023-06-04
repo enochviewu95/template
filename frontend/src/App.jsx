@@ -1,35 +1,3 @@
-// //import { useState } from 'react'
-// import Home from './pages/Home/Home';
-// import Prescription_form from './pages/Prescription_form/Prescription_form';
-// import Appointment from './pages/Appointment/Appointment';
-// import HealthHistory from "./pages/HealthHistory/HealthHistory";
-// import HealthHistoryForm from "./pages/HealthHistoryForm/HealthHistoryForm";
-// import Loading from './components/Loading/Loading';
-// import { Route } from 'react-router';
-// import { BrowserRouter, Routes } from 'react-router-dom';
-// import './App.css';
-// function App() {
-
-//   return (
-    
-//       <BrowserRouter>
-//         <Routes>
-//          <Route path="/" element={<Home />} />
-//          <Route path="appointment" element={<Appointment />} />
-//          <Route path="prescription_form" element={<Prescription_form />} />
-//          <Route path="health_history" element={<HealthHistory />} />
-//          <Route path="healthHistoryForm" element={<HealthHistoryForm />} />
-//          <Route path="Loading" element={<Loading />} />
-//          </Routes>
-//        </BrowserRouter>
-    
-//   )
-// }
-
-// export default App
-
-
-
 
 import Home from "./pages/Home/Home";
 import Account from "./components/Account/Account";
