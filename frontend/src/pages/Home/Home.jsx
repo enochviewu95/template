@@ -78,13 +78,13 @@ function Home() {
           <LazyLoadImage src="Group.webp" />
         </div>
         <div className={styles.button}>
-          <Link to="/HealthHistory">
+          <Link to="/health_history">
             <div className={styles.b1}>
               Check your Health History
               <LazyLoadImage src="history.webp" />
             </div>
           </Link>
-          <Link to="/chatbot">
+          <Link to="/Chatbot">
             <div className={styles.b2}>
               Have queries? Ask Here
               <LazyLoadImage src="query.webp" />

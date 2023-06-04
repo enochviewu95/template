@@ -4,10 +4,11 @@ import { Link } from "react-router-dom";
 import { useState, useEffect, useMemo } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+//import { toast } from "react-toastify";
 import { useFetchPrescriptionQuery } from "../../store";
-import Loading from "../../components/Loading/Loading";
+//import Loading from "../../components/Loading/Loading";
 import DocumentPreview from "../../components/DocumentPreview/DocumentPreview";
+
 
 function Prescription() {
   const navigate = useNavigate();
@@ -36,25 +37,25 @@ function Prescription() {
     }
   }, [data, selectedPrescription]);
 
-  useEffect(() => {
-    if (!patient.isLoggedIn) {
-      navigate("/login");
-      toast.error("Please login to continue");
-    }
-    refetch();
-  }, [navigate, patient.isLoggedIn]);
+  // useEffect(() => {
+  //   if (!patient.isLoggedIn) {
+  //     navigate("/login");
+  //     toast.error("Please login to continue");
+  //   }
+  //   refetch();
+  // }, [navigate, patient.isLoggedIn]);
 
-  if (isFetching) {
-    return (
-      <div>
-        <Loading />
-      </div>
-    );
-  }
+  // if (isFetching) {
+  //   return (
+  //     <div>
+  //       <Loading />
+  //     </div>
+  //   );
+  // }
 
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
+  // if (error) {
+  //   return <div>Error: {error.message}</div>;
+  // }
 
   return (
     <>
@@ -80,7 +81,7 @@ function Prescription() {
         </div>
       </div>
       <div className={styles.button}>
-        <Link to="/prescription_form">
+        <Link to="/Prescription_form">
           <div className={styles.b}>Create New Record</div>
         </Link>
       </div>
@@ -156,7 +157,7 @@ function Prescription() {
               </div>
             </div>
           </div>
-          {data.prescriptions.length === 0 && (
+          {data?.prescriptions.length === 0 && (
             <div className={styles.lowerSection}>
               Upload Your Prescriptions Here to see useful insights!
             </div>

@@ -3,10 +3,10 @@ import styles from "./Test.module.css";
 import { useSelector } from "react-redux";
 import { useState, useEffect, useMemo } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { toast } from "react-toastify";
+//import { toast } from "react-toastify";
 import { useFetchTestsQuery } from "../../store";
 import DocumentPreview from "../../components/DocumentPreview/DocumentPreview";
-import Loading from "../../components/Loading/Loading";
+//import Loading from "../../components/Loading/Loading";
 
 function Test() {
   const patient = useSelector((state) => {
@@ -32,25 +32,25 @@ function Test() {
     }
   }, [data, selectedTest]);
 
-  useEffect(() => {
-    if (!patient.isLoggedIn) {
-      navigate("/login");
-      toast.error("Please login to continue");
-    }
-    refetch();
-  }, [navigate, patient.isLoggedIn]);
+  // useEffect(() => {
+  //   if (!patient.isLoggedIn) {
+  //     navigate("/login");
+  //     toast.error("Please login to continue");
+  //   }
+  //   refetch();
+  // }, [navigate, patient.isLoggedIn]);
 
-  if (isFetching) {
-    return (
-      <div>
-        <Loading />
-      </div>
-    );
-  }
+  // if (isFetching) {
+  //   return (
+  //     <div>
+  //       <Loading />
+  //     </div>
+  //   );
+  // }
 
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
+  // if (error) {
+  //   return <div>Error: {error.message}</div>;
+  // }
 
   return (
     <>
@@ -74,7 +74,7 @@ function Test() {
         </div>
       </div>
       <div className={styles.button}>
-        <Link to="/addReports">
+        <Link to="/AddReport">
           <div className={styles.b}>Create New Record</div>
         </Link>
       </div>

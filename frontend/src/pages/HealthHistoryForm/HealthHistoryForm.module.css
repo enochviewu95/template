@@ -11,8 +11,8 @@ body {
     width:90vw;
     margin: 15px auto;
     padding: 0px 10px;
-    background-color: #f4f4f4;
-    border: 1px solid #ccc;
+    background-color: #524400;
+    border: 2px solid #ccc;
     border-radius: 20px;
 }
 
@@ -22,7 +22,7 @@ body {
     font-style: 'sans-serif';
     font-weight: 400;
     font-size: 40px;
-    color: #524400;
+    color: white;
     /* identical to box height */
 }
 
@@ -41,7 +41,7 @@ body {
 }
 
 .input_field label{
-    color:rgb(0, 0, 0);
+    color:rgb(248, 245, 245);
 }
 
 
@@ -56,7 +56,7 @@ body {
 .docter_name {
     margin-left:15px;
     margin-top: 5px;
-    color: black;
+    color: rgb(250, 247, 247);
     font-size:1.2rem;
     margin-right:20px;
 }
@@ -167,7 +167,7 @@ body {
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
     color: #FFFFFF;
     border: none;
     cursor: pointer;

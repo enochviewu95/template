@@ -9,7 +9,7 @@ import {
   useParticipant,
 } from "@videosdk.live/react-sdk";
 
-//import { getToken, createMeeting } from "../../api";
+import { getToken, createMeeting } from "../../api";
 import ReactPlayer from "react-player";
 
 function JoinScreen({ getMeetingAndToken }) {

@@ -1,14 +1,14 @@
 import Navbar from "../../components/Navbar/Navbar";
 import styles from "./AddReport.module.css";
-import { useEffect, useState } from "react";
-import { useTestFormMutation } from "../../store";
+import { useState } from "react";
+//import { useTestFormMutation } from "../../store";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import Loading from "../../components/Loading/Loading";
+//import Loading from "../../components/Loading/Loading";
 import useFileUploader from "../../hooks/useFileUploader";
 
-function Home() {
+function AddReport() {
   const navigate = useNavigate();
   const [testName, setTestName] = useState("");
   const [testComments, setTestComments] = useState("");
@@ -20,23 +20,23 @@ function Home() {
 
   const [files, handleFileChange] = useFileUploader(4);
 
-  const [form, formResults] = useTestFormMutation();
-  const isLoading = formResults.isLoading;
+  // const [form, formResults] = useTestFormMutation();
+  // const isLoading = formResults.isLoading;
 
-  useEffect(() => {
-    if (!patient.isLoggedIn) {
-      navigate("/login");
-      toast.error("Please login to continue");
-    }
-  }, [navigate, patient.isLoggedIn]);
+  // useEffect(() => {
+  //   if (!patient.isLoggedIn) {
+  //     navigate("/login");
+  //     toast.error("Please login to continue");
+  //   }
+  // }, [navigate, patient.isLoggedIn]);
 
-  if (isLoading) {
-    return (
-      <div>
-        <Loading />
-      </div>
-    );
-  }
+  // if (isLoading) {
+  //   return (
+  //     <div>
+  //       <Loading />
+  //     </div>
+  //   );
+  // }
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -137,4 +137,4 @@ function Home() {
     </>
   );
 }
-export default Home;
+export default AddReport;
