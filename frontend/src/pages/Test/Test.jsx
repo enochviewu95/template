@@ -74,7 +74,7 @@ function Test() {
         </div>
       </div>
       <div className={styles.button}>
-        <Link to="/AddReport">
+        <Link to="/AddReports">
           <div className={styles.b}>Create New Record</div>
         </Link>
       </div>

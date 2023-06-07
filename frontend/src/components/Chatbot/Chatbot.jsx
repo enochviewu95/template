@@ -25,7 +25,7 @@ function Chatbot() {
         <input
           type="text"
           placeholder="Type your message here"
-          onKeyPress={(e) => {
+          onKeyDown={(e) => {
             if (e.key === "Enter") {
               handleSend(e.target.value);
               e.target.value = "";

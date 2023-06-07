@@ -3,7 +3,7 @@ import Home from "./pages/Home/Home";
 import Account from "./components/Account/Account";
 import AccountD from "./components/Doctor/AccountD/AccountD";
 import Payments from "./components/Payments/Payments";
-//import Login from "./pages/Login/Login";
+import Login from "./pages/Login/Login";
 import Health_history_form from "./pages/HealthHistoryForm/HealthHistoryForm";
 import Register from "./pages/Register/Register";
 import Prescription_form from "./pages/Prescription_form/Prescription_form";
@@ -39,12 +39,14 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Loading from "./components/Loading/Loading";
+import Chatbot from "./components/Chatbot/Chatbot";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       <Route index element={<Home />} />
-      {/* <Route path="login" element={<Login />} /> */}
+      <Route path="login" element={<Login />} />
+      {/* <Route path="chatbot" element={<Chatbot/>}/> */}
       <Route path="register" element={<Register />} />
       <Route path="health_history" element={<Health_history />} />
       <Route path="healthHistoryForm" element={<Health_history_form />} />
