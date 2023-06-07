@@ -70,7 +70,7 @@ function Home() {
           <div className={styles.content2}>
             Keeping your Health Records <br></br> organized and Safe!
           </div>
-          <Link to="/Login">
+          <Link to="/login">
             <div className={styles.content3}>Get Started</div>
           </Link>
         </div>
@@ -84,7 +84,7 @@ function Home() {
               <LazyLoadImage src="history.webp" />
             </div>
           </Link>
-          <Link to="/Chatbot">
+          <Link to="/chatbot">
             <div className={styles.b2}>
               Have queries? Ask Here
               <LazyLoadImage src="query.webp" />

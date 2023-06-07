@@ -58,9 +58,9 @@ const Navbar = () => {
               <div className={styles.signIn}>
                 <img alt="account" src={Account} />
                 {!patient.isLoggedIn ? (
-                  <Link to="/login">Sign In</Link>
+                  <Link to= "/Login">Sign In</Link>
                 ) : (
-                  <Link to="/settings/account">Account</Link>
+                  <Link to="/Settings/Account">Account</Link>
                 )}
               </div>
             </li>
