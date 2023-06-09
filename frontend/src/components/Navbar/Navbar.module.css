@@ -35,11 +35,13 @@
   display: flex;
   width: 180px;
   align-items: center;
+  border-radius: 50px;
+  background-color: #CDAA64;
 }
 
 .signIn img {
-  margin-right: 5px;
-  margin-left: 40px;
+  margin-right: 0px;
+  margin-left: 30px;
 }
 
 .nav_elements ul {
@@ -85,12 +87,12 @@
 
 .nav_elements ul li :hover {
   /* transform: translateY(-10px); */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); */
   background-color: #585c27;
 }
 .appointment :hover {
   /* transform: translateY(-10px); */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); */
   background-color: #36837c;
 }
 
