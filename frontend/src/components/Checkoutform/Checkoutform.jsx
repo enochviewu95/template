@@ -5,8 +5,7 @@ import {
   useStripe,
   useElements,
 } from "@stripe/react-stripe-js";
-
-import styles from "./Checkoutform.module.css";
+import styles from "./CheckoutForm.module.css";
 import { toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
