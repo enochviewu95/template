@@ -148,7 +148,7 @@ function Register() {
         <input
           type="text"
           placeholder="Enter your message here"
-          onKeyPress={(e) => {
+          onKeyDown={(e) => {
             if (e.key === "Enter") {
               handleSend(e.target.value);
               e.target.value = "";

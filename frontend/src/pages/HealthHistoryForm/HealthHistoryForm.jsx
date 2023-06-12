@@ -72,7 +72,7 @@ function Health_history_form() {
           className={styles.health_history_form}
           encType="multipart/form-data"
         >
-          <h1 className={styles.header}>Health History Record</h1>
+          <h1 className={styles.header}>Add History Record</h1>
 
 
 

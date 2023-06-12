@@ -56,7 +56,7 @@ function Appointment() {
           </div>
           <div className={styles.button}>
             <a href="">
-              <div className={styles.b}>Create New Record</div>
+              <div className={styles.b}>Request New Appointment</div>
             </a>
           </div>
           <div className={styles.t1}>Doctors Suggestions</div>
@@ -120,7 +120,7 @@ function Appointment() {
             billingAddress
             shippingAddress
           > */}
-          <Link to="/Checkout">
+          <Link to="/checkout">
             <div className={styles.pay}>Pay GHC 50</div>
           </Link>
           {/* </StripeCheckout> */}

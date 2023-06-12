@@ -23,6 +23,7 @@ import SelectPatient from "./pages/Doctor/SelectPatient/SelectPatient";
 import VideoRoom from "./pages/video_room/video_room";
 import SettingsDoctor from "./pages/Doctor/SettingsDoctor/SettingsDoctor";
 import Checkout from "./pages/Checkout/checkout";
+import Checkoutform from "./components/CheckoutForm/CheckoutForm";
 import Error404 from "./components/Error404/Error404";
 import { useEffect } from "react";
 import { useCookies } from "react-cookie";
@@ -39,7 +40,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Loading from "./components/Loading/Loading";
-import Chatbot from "./components/Chatbot/Chatbot";
+//import Chatbot from "./components/Chatbot/Chatbot";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -58,6 +59,8 @@ const router = createBrowserRouter(
       <Route path="Loading" element={<Loading />} />
       <Route path="/video_room" element={<VideoRoom />} />
       <Route path="/checkout" element={<Checkout />} />
+      <Route path="/checkoutform" element={<Checkoutform />} />
+
       {/* settings */}
       <Route path="settings">
         <Route
