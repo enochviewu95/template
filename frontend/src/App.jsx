@@ -30,6 +30,7 @@ import { useCookies } from "react-cookie";
 import { useDispatch, useSelector } from "react-redux";
 import { loginSuccess } from "./store";
 import { doctorLoginSuccess } from "./store";
+import SignUp from "./pages/SignUp/SignUp";
 
 import "./App.css";
 
@@ -40,14 +41,15 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Loading from "./components/Loading/Loading";
-//import Chatbot from "./components/Chatbot/Chatbot";
+import Chatbot from "./components/Chatbot/Chatbot";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       <Route index element={<Home />} />
       <Route path="login" element={<Login />} />
-      {/* <Route path="chatbot" element={<Chatbot/>}/> */}
+      <Route path="signup" element={<SignUp />} />
+      <Route path="chatbot" element={<Chatbot/>}/>
       <Route path="register" element={<Register />} />
       <Route path="health_history" element={<Health_history />} />
       <Route path="healthHistoryForm" element={<Health_history_form />} />

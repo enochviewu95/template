@@ -28,7 +28,7 @@ function Login() {
               </h2>
             </div>
             <img src="Group 9424.webp" alt="" className={styles.img2} />
-          </div>
+          </div>v
         </div>
         <div className={styles.right_wrapper}>
           <h4 className={styles.login_content}>

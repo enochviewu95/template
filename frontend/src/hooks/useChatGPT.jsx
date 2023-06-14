@@ -1,7 +1,8 @@
 import { useState } from "react";
 
 
-function useChatGPT({ content, InitialMessage }) {
+// function useChatGPT( {content, InitialMessage} )
+function useChatGPT( content, InitialMessage ) {
   const API_KEY = import.meta.env.VITE_API_KEY;
   const systemMessage = {
     role: "system",

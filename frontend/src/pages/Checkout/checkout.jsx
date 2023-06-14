@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { loadStripe } from "@stripe/stripe-js";
+//import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import Navbar from "../../components/Navbar/Navbar";
 import CheckoutForm from "../../components/CheckoutForm/CheckoutForm";

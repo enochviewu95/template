@@ -1,0 +1,11 @@
+#patient signup
+{
+"username": "string",
+"gender": "male",
+"age": 30,
+"email": "user@example.com",
+"name": "string",
+"weight": 0,
+"height": 0,
+"id": 1,
+}
