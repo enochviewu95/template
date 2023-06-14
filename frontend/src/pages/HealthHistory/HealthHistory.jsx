@@ -83,23 +83,23 @@ function HealthHistory() {
         <div className={styles.d1}>
           <img src={data?.photo} />
           <ul>
-            <li>Name : &nbsp;&nbsp;{data?.name}</li>
-            <li>Gender : &nbsp;&nbsp;{data?.gender}</li>
-            <li>Age : &nbsp;&nbsp;{data?.age}</li>
+            <li>Name : &nbsp;&nbsp;{data?.name} Cletus Mangu</li>
+            <li>Gender : &nbsp;&nbsp;{data?.gender} Male</li>
+            <li>Age : &nbsp;&nbsp;{data?.age} 24</li>
           </ul>
           <ul>
-            <li>Allergies : &nbsp;&nbsp;{data?.allergies}</li>
-            <li>Other Conditions : &nbsp;&nbsp;{data?.otherConditions}</li>
-            <li>Weight : &nbsp;&nbsp;{data?.weight} kg</li>
+            <li>Allergies : &nbsp;&nbsp;{data?.allergies} Lactose Intolerant</li>
+            <li>Other Conditions : &nbsp;&nbsp;{data?.otherConditions} PCOS</li>
+            <li>Weight : &nbsp;&nbsp;{data?.weight} 45kg</li>
           </ul>
           <ul className={styles.lastInfo}>
             <li>Medications : &nbsp;&nbsp;{data?.medications}</li>
-            <li>Height : &nbsp;&nbsp;{data?.height} cm</li>
+            <li>Height : &nbsp;&nbsp;{data?.height} 150cm</li>
           </ul>
         </div>
         <div className={styles.d2}>
           <ul>
-            <li>Overview : &nbsp;&nbsp;{data?.overview}</li>
+            <li>Overview : &nbsp;&nbsp;{data?.overview} Cletus has been experiencing stomach ache since he ate pizza last night. The pain is around 7 on a scale of 1 to 10 and touching the area makes it worse. He is lactose intolerant and is not taking any medications or supplements currently. He has no significant health conditions or diseases that run in the family, and no past medical history or chronic conditions to mention.</li>
           </ul>
         </div>
       </div>

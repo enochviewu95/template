@@ -1,9 +1,9 @@
 body{
-  background-color: rgb(165, 154, 51);
+  background-color: white;
 }
 .d1 {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
   }
   
@@ -29,10 +29,11 @@ body{
     list-style: none;
     font-family: "Comfortaa";
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1.15vw;
     line-height: 2vw;
     color: #ffffff;
+    padding-left: 10px;
   }
   
   .d2 {
@@ -54,7 +55,6 @@ body{
     display: flex;
     flex-direction: row;
     margin-top: 20px;
-    /* background-color: white; */
     height: 400px
   }
   
@@ -216,14 +216,16 @@ body{
   }
   
   .infobox {
-    position: relative;
-    border: 3px solid #cdaa64;
-    border-radius: 20px;
-    height: 50vh;
-    margin-left: 2%;
-    width: 74%;
+    /* position: relative; */
     margin-top: 10px;
-    
+    background: #ffffff;
+    border: 3px solid #cdaa64;
+    width: 74%; 
+    border-radius: 20px;
+    margin-left: 2%;
+    height: 52vh;
+    display: flex;
+    flex-direction: row;
   }
   
   .title {
