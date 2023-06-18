@@ -12,7 +12,7 @@
 .navbar {
   height: 10vh;
   background: linear-gradient(84.18deg, #524400 0.31%, #524400 100%) fixed center center/cover;
-  position: relative;
+  /* position: relative; */
   width: 100%;
 }
 
