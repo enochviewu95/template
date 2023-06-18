@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import Loading from "../Loading/Loading";
+//import Loading from "../Loading/Loading";
 
 function Manage_doctors() {
   const navigate = useNavigate();
@@ -19,12 +19,12 @@ function Manage_doctors() {
     return state.patient;
   });
 
-  useEffect(() => {
-    if (!patient.isLoggedIn) {
-      navigate("/login");
-      toast.error("Please login to continue");
-    }
-  }, [navigate, patient.isLoggedIn]);
+  // useEffect(() => {
+  //   if (!patient.isLoggedIn) {
+  //     navigate("/login");
+  //     toast.error("Please login to continue");
+  //   }
+  // }, [navigate, patient.isLoggedIn]);
 
   const { data, error, isFetching } = useFetchHealthHistoryQuery(patient.id);
 
@@ -64,17 +64,17 @@ function Manage_doctors() {
     }
   };
 
-  if (isFetching) {
-    return (
-      <div>
-        <Loading />
-      </div>
-    );
-  }
+  // if (isFetching) {
+  //   return (
+  //     <div>
+  //       <Loading />
+  //     </div>
+  //   );
+  // }
 
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
+  // if (error) {
+  //   return <div>Error: {error.message}</div>;
+  // }
 
   return (
     <div className={styles.right_wrapper}>
@@ -83,7 +83,7 @@ function Manage_doctors() {
           Logout
         </button>
       </div>
-      <div className={styles.doctor_history}>
+      <div className={styles.doctor_history1}>
         <p className={`${styles.doctor_history_content} ${styles.firstdoc}`}>
           Doctor History
         </p>

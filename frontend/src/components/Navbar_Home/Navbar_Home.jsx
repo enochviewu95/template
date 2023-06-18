@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 //import Brand from "../../assets/Brand.svg";
 //import Brand2 from "../../assets/Brand2.svg";
 import Logo from "../img/Logo.png"
-import styles from "./Navbar.module.css";
+import styles from "./Navbar_Home.module.css";
 import Account from "../../assets/account.svg";
 import { useSelector } from "react-redux";
 import Burger from "../Burger/Burger";
@@ -58,10 +58,9 @@ const Navbar = () => {
               <div className={styles.signIn}>
                 <img alt="account" src={Account} />
                 {!patient.isLoggedIn ? (
-                   <Link to="/Settings/Account">Account</Link>
-                  
-                ) : (
                   <Link to= "/Login">Sign In</Link>
+                ) : (
+                  <Link to="/Settings/Account">Account</Link>
                 )}
               </div>
             </li>
@@ -72,6 +71,5 @@ const Navbar = () => {
     </nav>
   );
 };
-
 
 export default Navbar;

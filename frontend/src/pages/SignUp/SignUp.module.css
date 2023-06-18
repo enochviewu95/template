@@ -1,4 +1,15 @@
-.mainContainer{
-    height: 630px;
+body{
     background: #cdaa64;
+    align-items: center;
+}
+.first_section{
+    background: #524400;
+    color: white;
+}
+.second_section{
+
+    background: #524400;
+    color: white;
+    height: 60%;
+    margin-left: 50px;
 }

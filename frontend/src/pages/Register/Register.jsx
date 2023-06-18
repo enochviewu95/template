@@ -3,7 +3,7 @@ import useChatGPT from "../../hooks/useChatGPT";
 import Navbar from "../../components/Navbar/Navbar";
 import { useEffect, useRef } from "react";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useRegisterMutation } from "../../store";
 import { useCookies } from "react-cookie";
@@ -24,103 +24,104 @@ function Register() {
   const messageListRef = useRef(null);
   const inputRef = useRef(null);
 
-  useEffect(() => {
-    const lastMessage = messageListRef.current.lastChild;
-    lastMessage.scrollIntoView({ behavior: "smooth", block: "end" });
+  // useEffect(() => {
+  //   const lastMessage = messageListRef.current.lastChild;
+  //   lastMessage.scrollIntoView({ behavior: "smooth", block: "end" });
 
-    if (lastElement.message.includes("{")) {
-      const reqMsg = lastElement.message;
-      let init = reqMsg.indexOf("{");
-      let fin = reqMsg.indexOf("}");
-      let json = reqMsg.substr(init, fin - init + 1);
-      const jsonObject = JSON.parse(json);
-      messages.pop();
+  //   if (lastElement.message.includes("{")) {
+  //     const reqMsg = lastElement.message;
+  //     let init = reqMsg.indexOf("{");
+  //     let fin = reqMsg.indexOf("}");
+  //     let json = reqMsg.substr(init, fin - init + 1);
+  //     const jsonObject = JSON.parse(json);
+  //     messages.pop();
 
-      async function doRegister() {
-        let finalData = {
-          name: jsonObject.name,
-          email: cookies.patient.email,
-          photo: cookies.patient.photo,
-          age: jsonObject.age,
-          gender: jsonObject.gender,
-          height: jsonObject.height,
-          weight: jsonObject.weight,
-          allergies: jsonObject.allergies,
-          otherConditions: jsonObject.otherConditions,
-          medications: jsonObject.medications,
-          overview: jsonObject.overview,
-          token: cookies.patient.token,
-        };
-        try {
-          const { data } = await register(finalData);
+  //     async function doRegister() {
+  //       let finalData = {
+  //         name: jsonObject.name,
+  //         email: cookies.patient.email,
+  //         photo: cookies.patient.photo,
+  //         age: jsonObject.age,
+  //         gender: jsonObject.gender,
+  //         height: jsonObject.height,
+  //         weight: jsonObject.weight,
+  //         allergies: jsonObject.allergies,
+  //         otherConditions: jsonObject.otherConditions,
+  //         medications: jsonObject.medications,
+  //         overview: jsonObject.overview,
+  //         token: cookies.patient.token,
+  //       };
+  //       try {
+  //         const { data } = await register(finalData);
 
-          dispatch(
-            loginSuccess({
-              token: data.patient.token,
-              id: data.patient._id,
-              email: data.patient.email,
-              photo: data.patient.photo,
-              role: "patient",
-              name: data.patient.name,
-              age: data.patient.age,
-              gender: data.patient.gender,
-              height: data.patient.height,
-              weight: data.patient.weight,
-              allergies: data.patient.allergies,
-              otherConditions: data.patient.otherConditions,
-              medications: data.patient.medications,
-              overview: data.patient.overview,
-            })
-          );
-          setCookie(
-            "patient",
-            {
-              token: data.patient.token,
-              id: data.patient._id,
-              email: data.patient.email,
-              photo: data.patient.photo,
-              role: "patient",
-              name: data.patient.name,
-              age: data.patient.age,
-              gender: data.patient.gender,
-              height: data.patient.height,
-              weight: data.patient.weight,
-              allergies: data.patient.allergies,
-              otherConditions: data.patient.otherConditions,
-              medications: data.patient.medications,
-              overview: data.patient.overview,
-            },
-            { path: "/", sameSite: "strict" }
-          );
-        } catch (error) {
-          console.error(error);
-        }
-      }
+  //         dispatch(
+  //           loginSuccess({
+  //             token: data.patient.token,
+  //             id: data.patient._id,
+  //             email: data.patient.email,
+  //             photo: data.patient.photo,
+  //             role: "patient",
+  //             name: data.patient.name,
+  //             age: data.patient.age,
+  //             gender: data.patient.gender,
+  //             height: data.patient.height,
+  //             weight: data.patient.weight,
+  //             allergies: data.patient.allergies,
+  //             otherConditions: data.patient.otherConditions,
+  //             medications: data.patient.medications,
+  //             overview: data.patient.overview,
+  //           })
+  //         );
+  //         setCookie(
+  //           "patient",
+  //           {
+  //             token: data.patient.token,
+  //             id: data.patient._id,
+  //             email: data.patient.email,
+  //             photo: data.patient.photo,
+  //             role: "patient",
+  //             name: data.patient.name,
+  //             age: data.patient.age,
+  //             gender: data.patient.gender,
+  //             height: data.patient.height,
+  //             weight: data.patient.weight,
+  //             allergies: data.patient.allergies,
+  //             otherConditions: data.patient.otherConditions,
+  //             medications: data.patient.medications,
+  //             overview: data.patient.overview,
+  //           },
+  //           { path: "/", sameSite: "strict" }
+  //         );
+  //       } catch (error) {
+  //         console.error(error);
+  //       }
+  //     }
 
-      doRegister();
-    }
+  //     doRegister();
+  //   }
 
-    if (!cookies.patient.token) {
-      navigate("/login");
-    }
-    if (
-      cookies.patient.token &&
-      registerResults.data &&
-      registerResults.data.status === 200
-    ) {
-      navigate("/");
-      toast.success("Welcome");
-    }
+  //   if (!cookies.patient.token) {
+  //     navigate("/login");
+  //   }
+  //   if (
+  //     cookies.patient.token &&
+  //     registerResults.data &&
+  //     registerResults.data.status === 200
+  //   ) {
+  //     navigate("/");
+  //     toast.success("Welcome");
+  //   }
 
-    if (
-      cookies.patient.token &&
-      registerResults.data &&
-      registerResults.data.status === 400
-    ) {
-      navigate("/login");
-      toast.warn("Something Went Wrong");
-    }
-  }, [navigate, registerResults.data, cookies.patient.token, messages]);
+  //   if (
+  //     cookies.patient.token &&
+  //     registerResults.data &&
+  //     registerResults.data.status === 400
+  //   ) {
+  //     navigate("/login");
+  //     toast.warn("Something Went Wrong");
+  //   }
+  //  }, [navigate, registerResults.data, cookies.patient.token, messages]
+  // );
 
   const handleButtonClick = () => {
     const inputValue = inputRef.current.value;
@@ -148,7 +149,7 @@ function Register() {
         <input
           type="text"
           placeholder="Enter your message here"
-          onKeyDown={(e) => {
+          onKeyPress={(e) => {
             if (e.key === "Enter") {
               handleSend(e.target.value);
               e.target.value = "";

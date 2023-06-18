@@ -8,6 +8,8 @@ import { useRef, useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
+import Navbar_Home from "../../components/Navbar_Home/Navbar_Home";
+
 
 function Home() {
   const doctor = useSelector((state) => {
@@ -47,7 +49,7 @@ function Home() {
 
   return (
     <>
-      {doctor.isLoggedIn && !patient.isLoggedIn ? <NavbarD /> : <Navbar />}
+      {doctor.isLoggedIn && !patient.isLoggedIn ? <NavbarD /> : <Navbar_Home />}
       <div className={styles.herosection}>
         <div className={styles.img1}>
           <LazyLoadImage src="img1.webp" />
@@ -70,7 +72,7 @@ function Home() {
           <div className={styles.content2}>
             Keeping your Health Records <br></br> organized and Safe!
           </div>
-          <Link to="/login">
+          <Link to="/register">
             <div className={styles.content3}>Get Started</div>
           </Link>
         </div>
