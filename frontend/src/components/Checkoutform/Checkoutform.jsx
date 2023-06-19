@@ -49,12 +49,12 @@ export default function CheckoutForm() {
     });
   }, [stripe]);
 
-  let return_url;
-  if (import.meta.env.MODE === "development") {
-    return_url = "http://localhost:80/video_room";
-  } else {
-    return_url = "https://medifymeiitbhu.me/video_room";
-  }
+  // let return_url;
+  // if (import.meta.env.MODE === "development") {
+  //   return_url = "http://localhost:80/video_room";
+  // } else {
+  //   return_url = "https://medifymeiitbhu.me/video_room";
+  // }
 
   const handleSubmit = async (e) => {
     e.preventDefault();

@@ -6,6 +6,7 @@ import Navbar from "../../components/Navbar/Navbar";
 
 
 
+
 function Login() {
   const [role, setRole] = useState("patient");
   const { handleGoogleLogin, loginResults } = useGLogin(role);
@@ -20,6 +21,7 @@ function Login() {
     <>
       <Navbar />
       <div className={styles.grid_container}>
+       
         <div className={styles.left_wrapper}>
           <div className={styles.card}>
             <div>

@@ -14,7 +14,6 @@ const Navbar = () => {
   });
 
   const location = useLocation();
-
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
@@ -58,9 +57,10 @@ const Navbar = () => {
               <div className={styles.signIn}>
                 <img alt="account" src={Account} />
                 {!patient.isLoggedIn ? (
-                  <Link to= "/Login">Sign In</Link>
+                   <Link to="/Settings/Account">Account</Link>
+                  
                 ) : (
-                  <Link to="/Settings/Account">Account</Link>
+                  <Link to= "/Login">Sign In</Link>
                 )}
               </div>
             </li>
@@ -71,5 +71,6 @@ const Navbar = () => {
     </nav>
   );
 };
+
 
 export default Navbar;

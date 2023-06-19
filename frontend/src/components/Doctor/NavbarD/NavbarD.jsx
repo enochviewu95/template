@@ -1,9 +1,15 @@
-import { Link, useLocation } from "react-router-dom";
-import Brand from "../../../assets/Brand.svg";
-import styles from "./NavbarD.module.css";
+//import { Link, useLocation } from "react-router-dom";
+//import Brand from "../../../assets/Brand.svg";
+//import styles from "./NavbarD.module.css";
+//import Account from "../../../assets/account.svg";
+//import { useSelector } from "react-redux";
+//import Burger from "../BurgerD/BurgerD";
+//import Logo from "../../img/Logo";
+
+
+import {Link, useLocation} from "react-router-dom";
+import styles from "../NavbarD/NavbarD.module.css";
 import Account from "../../../assets/account.svg";
-import { useSelector } from "react-redux";
-import Burger from "../BurgerD/BurgerD";
 
 const Navbar = () => {
   const doctor = useSelector((state) => {
@@ -18,9 +24,9 @@ const Navbar = () => {
         <div>
           <Link to="/">
             <div className={styles.logoSection}>
-              <img alt="brand" src={Brand} />
+              <img alt="logo" src={Logo} />
               <span className={styles.brand}>
-                MEDIFY<p className={styles.brandIn}>ME</p>
+                Health<p className={styles.brandIn}>Doc</p>
               </span>
             </div>
           </Link>
@@ -67,7 +73,7 @@ const Navbar = () => {
             >
               <Link to="/doctor/test_report">Tests & Reports</Link>
             </li>
-            <li
+            {/* <li
               className={
                 location.pathname === "/doctor/patient_appointment"
                   ? styles.active
@@ -75,7 +81,17 @@ const Navbar = () => {
               }
             >
               <Link to="/doctor/patient_appointment">Appointment</Link>
+            </li> */}
+
+             <li>
+            <div className={styles.appointment}>
+                <Link style={{ color: "black" }} to="/doctor/patient_appointment">
+                  Appointment
+                </Link>
+              </div>
             </li>
+
+
             <li>
               <div className={styles.signIn}>
                 <img alt="account" src={Account} />

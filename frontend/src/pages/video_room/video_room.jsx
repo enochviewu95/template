@@ -196,7 +196,7 @@ function App() {
         meetingId,
         micEnabled: true,
         webcamEnabled: true,
-        name: "Medifyme",
+        name: "healthdoc",
       }}
       token={token}
     >

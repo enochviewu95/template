@@ -22,6 +22,20 @@
   width: 100%;
 }
 
+
+.appointment {
+  background-color: #CDAA64;
+  color: #28333A !important;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 50px;
+}
+.appointment :hover {
+  /* transform: translateY(-10px); */
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); */
+  background-color: #36837c;
+}
 .menu_icon {
   display: none;
 }

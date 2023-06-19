@@ -30,7 +30,9 @@ import { useCookies } from "react-cookie";
 import { useDispatch, useSelector } from "react-redux";
 import { loginSuccess } from "./store";
 import { doctorLoginSuccess } from "./store";
+import AccountCard from "./components/AccountCard/AccountCard";
 import SignUp from "./pages/SignUp/SignUp";
+
 
 import "./App.css";
 
@@ -62,6 +64,8 @@ const router = createBrowserRouter(
       <Route path="/video_room" element={<VideoRoom />} />
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/checkoutform" element={<Checkoutform />} />
+
+      <Route path="/accountcard" element={<AccountCard />} />
 
       {/* settings */}
       <Route path="settings">
