@@ -14,7 +14,6 @@ const Navbar = () => {
   });
 
   const location = useLocation();
-
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
