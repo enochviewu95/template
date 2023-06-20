@@ -1,0 +1,7 @@
+backend folder uses:
+ “config” for configuration files, 
+ “controllers” for handling requests and responses, 
+ “models” for defining your database schemas, 
+ “routes” for defining your API endpoints,
+ “utils” folder for any utility functions you might write
+ 
