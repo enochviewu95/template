@@ -1,176 +1,7 @@
-// import styles from "./Register.module.css";
-// import useChatGPT from "../../hooks/useChatGPT";
-// import Navbar from "../../components/Navbar/Navbar";
-// import { useEffect, useRef } from "react";
-// import { toast } from "react-toastify";
-// import { useNavigate, } from "react-router-dom";
-// import { useDispatch } from "react-redux";
-// import { useRegisterMutation } from "../../store";
-// import { useCookies } from "react-cookie";
-// import { loginSuccess } from "../../store";
-// import registerData from "../../assets/RegisterData.json";
-
-// function Register() {
-//   const dispatch = useDispatch();
-//   const navigate = useNavigate();
-//   const { messages, handleSend } = useChatGPT({
-//     InitialMessage: registerData.InitialMessage,
-//     content: registerData.content,
-//   });
-//   const [register, registerResults] = useRegisterMutation();
-//   const [cookies, setCookie] = useCookies(["patient"]);
-//   const lastElement = messages[messages.length - 1];
-
-//   const messageListRef = useRef(null);
-//   const inputRef = useRef(null);
-
-//   useEffect(() => {
-//     const lastMessage = messageListRef.current.lastChild;
-//     lastMessage.scrollIntoView({ behavior: "smooth", block: "end" });
-
-//     if (lastElement.message.includes("{")) {
-//       const reqMsg = lastElement.message;
-//       let init = reqMsg.indexOf("{");
-//       let fin = reqMsg.indexOf("}");
-//       let json = reqMsg.substr(init, fin - init + 1);
-//       const jsonObject = JSON.parse(json);
-//       messages.pop();
-
-//       async function doRegister() {
-//         let finalData = {
-//           name: jsonObject.name,
-//           email: cookies.patient.email,
-//           photo: cookies.patient.photo,
-//           age: jsonObject.age,
-//           gender: jsonObject.gender,
-//           height: jsonObject.height,
-//           weight: jsonObject.weight,
-//           allergies: jsonObject.allergies,
-//           otherConditions: jsonObject.otherConditions,
-//           medications: jsonObject.medications,
-//           overview: jsonObject.overview,
-//           token: cookies.patient.token,
-//         };
-//         try {
-//           const { data } = await register(finalData);
-
-//           dispatch(
-//             loginSuccess({
-//               token: data.patient.token,
-//               id: data.patient._id,
-//               email: data.patient.email,
-//               photo: data.patient.photo,
-//               role: "patient",
-//               name: data.patient.name,
-//               age: data.patient.age,
-//               gender: data.patient.gender,
-//               height: data.patient.height,
-//               weight: data.patient.weight,
-//               allergies: data.patient.allergies,
-//               otherConditions: data.patient.otherConditions,
-//               medications: data.patient.medications,
-//               overview: data.patient.overview,
-//             })
-//           );
-//           setCookie(
-//             "patient",
-//             {
-//               token: data.patient.token,
-//               id: data.patient._id,
-//               email: data.patient.email,
-//               photo: data.patient.photo,
-//               role: "patient",
-//               name: data.patient.name,
-//               age: data.patient.age,
-//               gender: data.patient.gender,
-//               height: data.patient.height,
-//               weight: data.patient.weight,
-//               allergies: data.patient.allergies,
-//               otherConditions: data.patient.otherConditions,
-//               medications: data.patient.medications,
-//               overview: data.patient.overview,
-//             },
-//             { path: "/", sameSite: "strict" }
-//           );
-//         } catch (error) {
-//           console.error(error);
-//         }
-//       }
-
-//       doRegister();
-//     }
-
-//     if (!cookies.patient.token) {
-//       navigate("/login");
-//     }
-//     if (
-//       cookies.patient.token &&
-//       registerResults.data &&
-//       registerResults.data.status === 200
-//     ) {
-//       navigate("/");
-//       toast.success("Welcome");
-//     }
-
-//     if (
-//       cookies.patient.token &&
-//       registerResults.data &&
-//       registerResults.data.status === 400
-//     ) {
-//       navigate("/login");
-//       toast.warn("Something Went Wrong");
-//     }
-//    }, [navigate, registerResults.data, cookies.patient.token, messages]
-//   );
-
-//   const handleButtonClick = () => {
-//     const inputValue = inputRef.current.value;
-//     handleSend(inputValue);
-//     inputRef.current.value = "";
-//   };
-
-//   return (
-//     <div className={styles.chatContainer}>
-//       {/* <Navbar /> */}
-//       <div className={styles.title}>Tell us about yourself</div>
-//       <div className={styles.messageList} ref={messageListRef}>
-//         {messages.map((message, i) => (
-//           <div
-//             key={i}
-//             className={`${
-//               message.sender === "ChatGPT" ? styles.incoming : styles.outgoing
-//             }`}
-//           >
-//             <div className={styles.messageText}>{message.message}</div>
-//           </div>
-//         ))}
-//       </div>
-//       <div className={styles.messageInput}>
-//         <input
-//           type="text"
-//           placeholder="Enter your message here"
-//           onKeyDown={(e) => {
-//             if (e.key === "Enter") {
-//               handleSend(e.target.value);
-//               e.target.value = "";
-//             }
-//           }}
-//           ref={inputRef}
-//         />
-//         <button onClick={handleButtonClick} className={styles.button}>
-//           <img src="image8.webp" />
-//         </button>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Register;
-
-
 
 import { useState } from 'react';
 import styles from "./Register.module.css";
+import { Link, useLocation } from "react-router-dom";
 
 
 export default function Form() {
@@ -221,7 +52,7 @@ export default function Form() {
 				style={{
 					display: submitted ? '' : 'none',
 				}}>
-				<h1> {name} successfully registered!!</h1>
+				<h3> {name} successfully registered!!</h3>
 			</div>
 		);
 	};
@@ -234,10 +65,16 @@ export default function Form() {
 				style={{
 					display: error ? '' : 'none',
 				}}>
-				<h1>Please enter all the fields</h1>
+				<h1>Please enter all the required fields</h1>
 			</div>
 		);
 	};
+
+  const [userGender, setUserGender] = useState("Gender");
+
+  const handleChange = (event) => {
+    setUserGender(event.target.value)
+  }
 
 	return (
 		<div className={styles.form}>
@@ -257,6 +94,20 @@ export default function Form() {
 				<input onChange={handleName} className={styles.input}
 					value={name} type="text" />
 
+                <label className="label">Gender</label>
+				<select className={styles.label} value={userGender} onChange={handleChange}>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+				</select>
+
+       				 {/* <label className="label">Gender</label>
+				  <input onChange={handleName} className={styles.input}
+					  value={name} type="text" /> */}
+
+                <label className="label">Age</label>
+				<input onChange={handleName} className={styles.input}
+					value={name} type="text" />
+
 				<label className="label">Email</label>
 				<input onChange={handleEmail} className={styles.input}
 					value={email} type="email" />
@@ -265,10 +116,26 @@ export default function Form() {
 				<input onChange={handlePassword} className={styles.input}
 					value={password} type="password" />
 
+                <label className="label">Weight</label>
+				<input onChange={handleName} className={styles.input}
+					value={name} type="text" />
+
+                <label className="label">Height</label>
+				<input onChange={handleName} className={styles.input}
+					value={name} type="text" />
+
 				<button onClick={handleSubmit} className={styles.btn}
 						type="submit">
 					Submit
 				</button>
+				<div className={styles.signin_option}>
+					<span>Have account? </span>
+					<span className={styles.signin}>  <Link  to="/login">
+						signin
+						</Link>
+					</span>
+              
+                </div>
 			</form>
 		</div>
 	);
