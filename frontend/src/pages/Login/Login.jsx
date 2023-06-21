@@ -3,13 +3,24 @@ import styles from "./Login.module.css";
 import { useState } from "react";
 import { useGLogin } from "../../hooks/useGLogin";
 import Navbar from "../../components/Navbar/Navbar";
-
+import useLogout from "../../hooks/useLogout";
+import { useSelector } from "react-redux";
+import { Link, useLocation } from "react-router-dom";
 
 
 
 function Login() {
   const [role, setRole] = useState("patient");
   const { handleGoogleLogin, loginResults } = useGLogin(role);
+
+  const { handleLogout } = useLogout();
+  const patient = useSelector((state) => {
+    return state.patient;
+  });
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+  };
 
 //   const loginHandler = useGoogleLogin({
 //     onSuccess: async (tokenResponse) => {
@@ -56,30 +67,49 @@ function Login() {
               </option>
             </select>
 
-            <button
-              className={styles.google_login_b}
-              disabled={loginResults.isLoading}
-              onClick={() => loginHandler()}
-            >
-              <span className={styles.google_p}>
-                {loginResults.isLoading ? (
-                  <div className={styles.loggedin}>Logging in...</div>
-                ) : (
-                  <div>
-                    <img src="/Google_Icon.webp" />
-                    Sign in with google
-                  </div>
-                )}
-              </span>
-            </button>
+          <div className={styles.row}>
+          <label className={styles.color} htmlFor="email">
+            Email address:
+          </label>
+          <input
+            className={styles.input_text}
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            defaultValue={patient.email}
+            required
+          />
+        </div>
 
-            <div className={styles.login_lowerpart}>
-              <img src="login.webp" alt="" className={styles.img3} />
-              <p className={styles.login_lower_content}>
-                First time users will be asked a few questions by our AI Powered
-                Chatbot to begin their journey!
-              </p>
-            </div>
+        <div className={styles.row}>
+          <label className={styles.color} htmlFor="password">
+            User Password:
+          </label>
+          <input
+            className={styles.input_text}
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+        <button disabled={loginResults.isLoading}
+                onClick={() => loginHandler()} 
+                className={styles.submit_button} type="submit">
+          Submit
+        </button>
+
+        <div className={styles.signin_option}>
+					<span>Don't have account? </span>
+					<span className={styles.signin}>  <Link  to="/register">
+						SignUp
+						</Link>
+					</span>
+              
+        </div>
+           
           </div>
         </div>
       </div>
